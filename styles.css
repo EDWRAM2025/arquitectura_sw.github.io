@@ -1,0 +1,97 @@
+.contenedorFoto {
+    background-image: url('./img1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.celeste {
+    color: #4abfdb;
+}
+
+.botonInfo {
+    border-radius: 12px;
+    padding: 10px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.botonInfo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.imagenUsuario {
+    max-width: 130px;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    background: #ecf0f1;
+    height: 10px;
+    border-radius: 5px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    width: 0%;
+    transition: width 1s ease;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #3498db; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado por defecto */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2ecc71; /* Color al pasar el cursor */
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+a:active {
+    color: #1abc9c; /* Color al hacer clic */
+}
+
+/* Estilos para los enlaces en forma de botón */
+.enlace-boton {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enlace-boton:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.enlace-boton:active {
+    background-color: #1abc9c;
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
