@@ -11,33 +11,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f0f8ff;
             margin: 0;
             padding: 0;
         }
 
         .header {
-            background-color: #333;
+            background-color: #1e3a8a;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        .logo-img {
+        .header img {
             width: 150px;
             height: auto;
-            display: block;
-            margin: 10px auto;
         }
 
         .container {
             padding: 20px;
-            margin-left: 220px;
         }
 
         .container-section {
@@ -45,39 +37,36 @@
             padding: 20px;
             border-radius: 8px;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .sobre-mi {
-            background-color: #6c757d;
+            background-color: #3b82f6;
         }
 
-        .proyectos {
-            background-color: #28a745;
-        }
-
-        .ubicacion {
-            background-color: #ffc107;
+        .perfil {
+            background-color: #2563eb;
         }
 
         .container-section h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
         }
 
         .container-section p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 800px;
         }
 
         .footer {
-            background-color: #333;
+            background-color: #1e3a8a;
             color: white;
             padding: 20px;
             text-align: center;
-        }
-
-        .footer-icons {
-            margin-bottom: 10px;
         }
 
         .footer-icons a {
@@ -91,26 +80,33 @@
             transform: scale(1.2);
         }
 
-        .location-container {
-            background-color: #e9ecef;
-            padding: 20px;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para las imágenes de la galería */
+        .img-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .img-gallery img {
+            width: 30%;
+            height: auto;
             border-radius: 8px;
         }
 
-        /* Google Maps */
-        .location-container iframe {
-            width: 100%;
-            height: 300px;
-            border: 0;
-            border-radius: 8px;
-        }
-
+        /* Barra lateral */
         .sidebar {
             width: 200px;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #343a40;
+            background-color: #1e3a8a;
             color: white;
             height: 100%;
             padding-top: 20px;
@@ -140,12 +136,12 @@
         }
 
         .sidebar ul li a:hover {
-            background-color: #007bff;
+            background-color: #2563eb;
             padding: 5px;
             border-radius: 4px;
         }
 
-        /* Mobile friendly */
+        /* Móvil */
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -169,42 +165,16 @@
                 margin: 10px 0;
             }
         }
-
-        /* Estilos de imágenes */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 20px auto;
-        }
-
-        .img-gallery {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .img-gallery img {
-            width: 30%;
-            height: auto;
-            border-radius: 8px;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Cabecera -->
-    <header class="header">
-        <h1>Mi Perfil Profesional</h1>
-        <img src="logo.png" alt="Logo" class="logo-img">
-    </header>
-
-    <!-- Barra lateral (Índice) -->
+    <!-- Barra lateral -->
     <div class="sidebar">
         <h3>Índice</h3>
         <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#perfil">Mi Perfil Profesional</a></li>
             <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
     </div>
@@ -226,25 +196,14 @@
             </div>
         </section>
 
-        <!-- Proyectos -->
-        <section id="proyectos" class="container-section proyectos">
-            <h2>Mis Proyectos</h2>
-            <p>A continuación, los proyectos realizados en las últimas semanas:</p>
-            <ul>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 1 - Introducción a Bases de Datos</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 2 - Modelo Entidad Relación</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA 3_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 3 - SQL Server</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2001_EDWIN_RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Semana 4 - Enunciado 1</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2002.pdf" class="btn enlace-boton" target="_blank">Semana 5 - Enunciado 2</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_AZURE_SQL%20SERVER.pdf" class="btn enlace-boton" target="_blank">Semana 6 - Azure</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_Firebase%20Firestore.pdf" class="btn enlace-boton" target="_blank">Semana 7 - Firebase</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/SEGURIDAD_DATOS_SQL.pdf" class="btn enlace-boton" target="_blank">Semana 8 - Seguridad de Datos_SQL</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/PROYECTO_FINAL%20EDWIN%20RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Proyecto Final</a></li>
-            </ul>
+        <!-- Mi Perfil Profesional -->
+        <section id="perfil" class="container-section perfil">
+            <h2>Mi Perfil Profesional</h2>
+            <p>A lo largo de mi carrera profesional, he adquirido experiencia en el desarrollo de aplicaciones web y la implementación de bases de datos. Mi enfoque está en la optimización de procesos y la creación de soluciones eficientes. Me apasiona aprender nuevas tecnologías y estar al día con las tendencias del sector.</p>
         </section>
 
         <!-- Ubicación -->
-        <section id="ubicacion" class="container-section ubicacion">
+        <section id="ubicacion" class="container-section">
             <h2>Mi Ubicación</h2>
             <div class="location-container">
                 <iframe src="https://maps.google.com/maps?q=Huancayo,%20Per%C3%BA&output=embed" allowfullscreen="" loading="lazy"></iframe>
@@ -261,3 +220,4 @@
 </body>
 
 </html>
+
