@@ -3,176 +3,259 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Edwin Ramirez</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi Perfil Profesional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" rel="stylesheet">
     <style>
-        /* Estilos generales */
         body {
-            background-color: #f5f5f5;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Encabezado con logo */
         .header {
             background-color: #333;
             color: white;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
-            position: relative;
         }
 
-        .header img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 60px;
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
 
-        /* Índice en el lado izquierdo */
-        .sidebar {
-            position: fixed;
-            top: 90px;
-            left: 0;
-            width: 200px;
+        .container {
             padding: 20px;
-            background-color: #007bff;
-            height: 100vh;
-            color: white;
         }
 
-        .sidebar a {
-            color: white;
-            display: block;
-            margin: 10px 0;
+        .container-section {
+            margin-bottom: 40px;
+        }
+
+        .container-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .container-section p {
+            font-size: 1.1rem;
+        }
+
+        .container-section a {
+            color: #007bff;
             text-decoration: none;
-            transition: background 0.3s ease;
         }
 
-        .sidebar a:hover {
-            background-color: #0056b3;
-            padding-left: 10px;
+        .container-section a:hover {
+            text-decoration: underline;
         }
 
-        /* Contenido principal */
-        .main-content {
-            margin-left: 220px;
-            padding: 20px;
-        }
-
-        /* Botones */
-        .btn.botonInfo {
-            border-radius: 25px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease;
-        }
-
-        .btn.botonInfo:hover {
-            transform: scale(1.05);
-            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Pie de página */
         .footer {
             background-color: #333;
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            margin-top: 20px;
         }
 
-        /* Estilos de las imágenes */
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
+        .footer-icons {
             margin-bottom: 10px;
         }
 
-        .course-img {
+        .footer-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .location-container {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Google Maps */
+        .location-container iframe {
             width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #343a40;
+            color: white;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #007bff;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        /* Mobile friendly */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .footer-icons a {
+                font-size: 1.3rem;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .sidebar ul li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Estilos de imágenes */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+
+        .logo-img {
+            width: 200px;
             height: auto;
-            max-width: 400px;
-            margin: 15px 0;
-            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .img-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .img-gallery img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Encabezado con logo -->
-    <div class="header">
-        <img src="logo.png" alt="Logo de Edwin Ramirez">
-        <h1>Portafolio EDWIN RAMIREZ</h1>
-    </div>
+    <!-- Cabecera -->
+    <header class="header">
+        <h1>Mi Perfil Profesional</h1>
+        <img src="images/logo.png" alt="Logo" class="logo-img">
+    </header>
 
-    <!-- Índice lateral izquierdo -->
+    <!-- Barra lateral (Índice) -->
     <div class="sidebar">
-        <h4>Índice</h4>
-        <a href="#about">Sobre mí</a>
-        <a href="#info">Información básica</a>
-        <a href="#semana1">Semana 1</a>
-        <a href="#semana2">Semana 2</a>
-        <a href="#semana3">Semana 3</a>
-        <a href="#semana4">Semana 4</a>
-        <a href="#semana5">Semana 5</a>
-        <a href="#semana6">Semana 6</a>
-        <a href="#semana7">Semana 7</a>
-        <a href="#semana8">Semana 8</a>
-        <a href="#semana9">Semana 9</a>
+        <h3>Índice</h3>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
     </div>
 
-    <!-- Contenido principal -->
-    <div class="main-content">
-        <!-- Sección Sobre mí -->
-        <section id="about" class="mb-5">
+    <!-- Contenido Principal -->
+    <div class="container" style="margin-left: 220px;">
+
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="container-section">
             <h2>Sobre mí</h2>
-            <img src="foto.png" alt="Foto de Edwin Ramirez" class="profile-img">
-            <p><b>Hola, soy Edwin Ramirez, Ingeniero de Sistemas.</b></p>
-            <p>Especialista en programación Java, Python, HTML, CSS, bases de datos, diseño gráfico y web, e investigador científico.</p>
+            <img src="images/foto.png" alt="Foto Personal" class="profile-img">
+            <p>Soy un profesional apasionado por la tecnología y la innovación. Actualmente trabajo en proyectos que combinan el desarrollo web, bases de datos y la ingeniería de software.</p>
+            <p><b>Redes Sociales:</b></p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/mi-perfil" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/mi-perfil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/mi-perfil" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mi-perfil" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
         </section>
 
-        <!-- Información básica -->
-        <section id="info" class="mb-5">
-            <h2>Información Básica</h2>
-            <p><b>Dirección:</b> Jr. Pedro Gálvez 830</p>
-            <p><b>Fecha de Nacimiento:</b> 1 de Enero, 1992</p>
-            <p><b>Ciudad de Nacimiento:</b> Huancayo</p>
-            <p><b>Idiomas:</b> Inglés, Español</p>
-            <p><b>Género:</b> Masculino</p>
-        </section>
-
-        <!-- Enlaces a cada semana del curso -->
-        <section class="mb-5">
-            <h2>Curso de Base de Datos</h2>
-            <p>Este curso cubre conceptos fundamentales de bases de datos, incluyendo diseño, normalización, consultas SQL, y la administración de bases de datos en diferentes plataformas.</p>
-            <h3>Enlaces a los repositorios de GitHub:</h3>
+        <!-- Proyectos -->
+        <section id="proyectos" class="container-section">
+            <h2>Mis Proyectos</h2>
+            <p>A continuación, los proyectos realizados en las últimas semanas:</p>
             <ul>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank" id="semana1">Semana 1 - Introducción a Bases de Datos</a></li>
-                <img src="img/img1.jpg" alt="Imagen Semana 1" class="course-img">
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank" id="semana2">Semana 2 - Modelo Entidad Relación</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA%203_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank" id="semana3">Semana 3 - SQL Server</a></li>
-                <!-- Repite el patrón para las siguientes semanas -->
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 1 - Introducción a Bases de Datos</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 2 - Modelo Relacional</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_3_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 3 - Lenguaje SQL Básico</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_4_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 4 - Diseño de Bases de Datos</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_5_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 5 - Normalización</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_6_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 6 - Diseño de Bases de Datos Avanzado</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_7_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 7 - Administración de Bases de Datos</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_8_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank">Semana 8 - Optimización de Consultas</a></li>
             </ul>
         </section>
 
-        <!-- Mapa de Google Maps -->
-        <section class="mb-5">
-            <h2>Ubicación</h2>
-            <p>Ubicación de mi oficina en Huancayo:</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.0108396804313!2d-75.21173686851549!3d-12.066512020730273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e964b2e6b05e9%3A0x109f60d0421bc47f!2sJr.%20Cuzco%20433%2C%20Huancayo%2012000%2C%20Per%C3%BA!5e0!3m2!1ses-419!2sus!4v1698990624823!5m2!1ses-419!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Ubicación -->
+        <section id="ubicacion" class="container-section">
+            <h2>Mi Ubicación</h2>
+            <div class="location-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.477290920896!2d-75.29240452317118!3d-12.060297707134586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91070f321559c1c1%3A0xd91c4a75c25f68c9!2sJr.%20Cuzco%20433%20-%20Huancayo%2C%20Per%C3%BA!5e0!3m2!1ses-419!2ses!4v1697651746643!5m2!1ses-419!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
+
+        <!-- Galería de imágenes -->
+        <section class="img-gallery">
+            <img src="images/img1.jpg" alt="Imagen 1">
+            <img src="images/foto.png" alt="Imagen 2">
+            <img src="images/logo.png" alt="Imagen 3">
+        </section>
+
     </div>
 
     <!-- Pie de página -->
     <footer class="footer">
-        <p>Contacto: <i class="fab fa-whatsapp"></i> 967013078 - <i class="fas fa-map-marker-alt"></i> Jr. Cuzco 433 - Huancayo, Perú</p>
+        <p>© 2024 Edwin Ramirez</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
