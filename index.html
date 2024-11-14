@@ -1,72 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Web - Portafolio</title>
+    <title>Portafolio Edwin Ramirez</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Encabezado con logo */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 60px;
+        }
+
+        /* Índice en el lado izquierdo */
+        .sidebar {
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 200px;
+            padding: 20px;
+            background-color: #007bff;
+            height: 100vh;
+            color: white;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #0056b3;
+            padding-left: 10px;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Botones */
+        .btn.botonInfo {
+            border-radius: 25px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .btn.botonInfo:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Pie de página */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilos de las imágenes */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .course-img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container-fluid" style="padding: 0; position: relative;">
-        <div class="contenedorFoto">
-            <img src="./foto.png" class="imagenUsuario img-fluid rounded-circle mt-3" alt="Foto de usuario"> 
-            <p class="nombreUsuario fs-3 text-white mt-3">Edwin Ramirez</p>
-            <p class="profesionUsuario fs-6 text-white mb-3">Ingeniero de Sistemas</p>
-            <div class="redesSociales mb-3">
-                <a href="#"><i class="fab fa-twitter text-white me-2"></i></a>
-                <a href="#"><i class="fab fa-facebook text-white me-2"></i></a>
-                <a href="#"><i class="fab fa-linkedin text-white me-2"></i></a>
-                <a href="#"><i class="fab fa-instagram text-white me-2"></i></a>
-                <a href="#"><i class="fab fa-google-plus text-white me-2"></i></a>
-            </div>
-            <div class="contenedorBotones mt-3">
-                <button class="btn botonInfo btn-outline-primary">Hire Me</button>
-                <button class="btn botonInfo btn-outline-primary ms-3">Download CV</button>
-            </div>
-        </div>
+    <!-- Encabezado con logo -->
+    <div class="header">
+        <img src="img/logo.png" alt="Logo de Edwin Ramirez">
+        <h1>Portafolio EDWIN RAMIREZ</h1>
     </div>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About</h2>
-                <p class="celeste"><b>Hola, soy Edwin Ramirez, Ingeniero de Sistemas.</b></p>
-                <p>Especialista en programación Java, Python, HTML, CSS, bases de datos, diseño gráfico y web, e investigador científico.</p>
-            </div>
-            <div class="col-md-6">
-                <h2>Basic Information</h2>
-                <p><b>Address:</b> Jr. Pedro Gálvez 830</p>
-                <p><b>Date of Birth:</b> 1 January, 1992</p>
-                <p><b>Place of Birth:</b> Huancayo</p>
-                <p><b>Languages:</b> English, Spanish</p>
-                <p><b>Gender:</b> Male</p>
-            </div>
-        </div>
+    <!-- Índice lateral izquierdo -->
+    <div class="sidebar">
+        <h4>Índice</h4>
+        <a href="#about">Sobre mí</a>
+        <a href="#info">Información básica</a>
+        <a href="#semana1">Semana 1</a>
+        <a href="#semana2">Semana 2</a>
+        <a href="#semana3">Semana 3</a>
+        <a href="#semana4">Semana 4</a>
+        <a href="#semana5">Semana 5</a>
+        <a href="#semana6">Semana 6</a>
+        <a href="#semana7">Semana 7</a>
+        <a href="#semana8">Semana 8</a>
+        <a href="#semana9">Semana 9</a>
     </div>
 
-      <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <h2>Curso de Base de Datos</h2>
-                <p>Este curso cubre conceptos fundamentales de bases de datos, incluyendo diseño, normalización, consultas SQL, y la administración de bases de datos en diferentes plataformas.</p>
-                <h3>Enlaces a los repositorios de GitHub:</h3>
-                <ul class="list-unstyled">
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 1 - Introducción a Bases de Datos</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 2 - Modelo Entidad Relación</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA 3_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 3 - SQL Server</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2001_EDWIN_RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Semana 4 - Enunciado 1</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2002.pdf" class="btn enlace-boton" target="_blank">Semana 5 - Enunciado 2</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_AZURE_SQL%20SERVER.pdf" class="btn enlace-boton" target="_blank">Semana 6 - Azure</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_Firebase%20Firestore.pdf" class="btn enlace-boton" target="_blank">Semana 7 - Firebase</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/SEGURIDAD_DATOS_SQL.pdf" class="btn enlace-boton" target="_blank">Semana 8 - Seguridad de Datos_SQL</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/PROTECCION%20DE%20DATOS%20EN%20EL%20PERU.pdf" class="btn enlace-boton" target="_blank">Semana 9 - Protección de Datos_Perú</a></li>
-                </ul>
-                </ul>
-            </div>
-        </div>
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <!-- Sección Sobre mí -->
+        <section id="about" class="mb-5">
+            <h2>Sobre mí</h2>
+            <img src="img/foto.png" alt="Foto de Edwin Ramirez" class="profile-img">
+            <p><b>Hola, soy Edwin Ramirez, Ingeniero de Sistemas.</b></p>
+            <p>Especialista en programación Java, Python, HTML, CSS, bases de datos, diseño gráfico y web, e investigador científico.</p>
+        </section>
+
+        <!-- Información básica -->
+        <section id="info" class="mb-5">
+            <h2>Información Básica</h2>
+            <p><b>Dirección:</b> Jr. Pedro Gálvez 830</p>
+            <p><b>Fecha de Nacimiento:</b> 1 de Enero, 1992</p>
+            <p><b>Ciudad de Nacimiento:</b> Huancayo</p>
+            <p><b>Idiomas:</b> Inglés, Español</p>
+            <p><b>Género:</b> Masculino</p>
+        </section>
+
+        <!-- Enlaces a cada semana del curso -->
+        <section class="mb-5">
+            <h2>Curso de Base de Datos</h2>
+            <p>Este curso cubre conceptos fundamentales de bases de datos, incluyendo diseño, normalización, consultas SQL, y la administración de bases de datos en diferentes plataformas.</p>
+            <h3>Enlaces a los repositorios de GitHub:</h3>
+            <ul>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank" id="semana1">Semana 1 - Introducción a Bases de Datos</a></li>
+                <img src="img/img1.jpg" alt="Imagen Semana 1" class="course-img">
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank" id="semana2">Semana 2 - Modelo Entidad Relación</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA%203_EDWIN%20RAMIREZ%20YARASCA.pdf" target="_blank" id="semana3">Semana 3 - SQL Server</a></li>
+                <!-- Repite el patrón para las siguientes semanas -->
+            </ul>
+        </section>
+
+        <!-- Mapa de Google Maps -->
+        <section class="mb-5">
+            <h2>Ubicación</h2>
+            <p>Ubicación de mi oficina en Huancayo:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.0108396804313!2d-75.21173686851549!3d-12.066512020730273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e964b2e6b05e9%3A0x109f60d0421bc47f!2sJr.%20Cuzco%20433%2C%20Huancayo%2012000%2C%20Per%C3%BA!5e0!3m2!1ses-419!2sus!4v1698990624823!5m2!1ses-419!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>Contacto: <i class="fab fa-whatsapp"></i> 967013078 - <i class="fas fa-map-marker-alt"></i> Jr. Cuzco 433 - Huancayo, Perú</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
