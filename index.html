@@ -1,4 +1,4 @@
-er<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -28,30 +28,45 @@ er<!DOCTYPE html>
             font-size: 2.5rem;
         }
 
+        .logo-img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
         .container {
             padding: 20px;
+            margin-left: 220px;
         }
 
         .container-section {
             margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .sobre-mi {
+            background-color: #6c757d;
+        }
+
+        .proyectos {
+            background-color: #28a745;
+        }
+
+        .ubicacion {
+            background-color: #ffc107;
         }
 
         .container-section h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .container-section p {
             font-size: 1.1rem;
-        }
-
-        .container-section a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .container-section a:hover {
-            text-decoration: underline;
         }
 
         .footer {
@@ -163,13 +178,6 @@ er<!DOCTYPE html>
             margin: 20px auto;
         }
 
-        .logo-img {
-            width: 200px;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-
         .img-gallery {
             display: flex;
             justify-content: space-around;
@@ -202,10 +210,10 @@ er<!DOCTYPE html>
     </div>
 
     <!-- Contenido Principal -->
-    <div class="container" style="margin-left: 220px;">
+    <div class="container">
 
         <!-- Sobre mí -->
-        <section id="sobre-mi" class="container-section">
+        <section id="sobre-mi" class="container-section sobre-mi">
             <h2>Sobre mí</h2>
             <img src="foto.png" alt="Foto Personal" class="profile-img">
             <p>Soy un profesional apasionado por la tecnología y la innovación. Actualmente trabajo en proyectos que combinan el desarrollo web, bases de datos y la ingeniería de software.</p>
@@ -219,43 +227,37 @@ er<!DOCTYPE html>
         </section>
 
         <!-- Proyectos -->
-        <section id="proyectos" class="container-section">
+        <section id="proyectos" class="container-section proyectos">
             <h2>Mis Proyectos</h2>
             <p>A continuación, los proyectos realizados en las últimas semanas:</p>
             <ul>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 1 - Introducción a Bases de Datos</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 2 - Modelo Entidad Relación</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA 3_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 3 - SQL Server</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2001_EDWIN_RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Semana 4 - Enunciado 1</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2002.pdf" class="btn enlace-boton" target="_blank">Semana 5 - Enunciado 2</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_AZURE_SQL%20SERVER.pdf" class="btn enlace-boton" target="_blank">Semana 6 - Azure</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_Firebase%20Firestore.pdf" class="btn enlace-boton" target="_blank">Semana 7 - Firebase</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/SEGURIDAD_DATOS_SQL.pdf" class="btn enlace-boton" target="_blank">Semana 8 - Seguridad de Datos_SQL</a></li>
-                    <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/PROTECCION%20DE%20DATOS%20EN%20EL%20PERU.pdf" class="btn enlace-boton" target="_blank">Semana 9 - Protección de Datos_Perú</a></li
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 1 - Introducción a Bases de Datos</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 2 - Modelo Entidad Relación</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA 3_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 3 - SQL Server</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2001_EDWIN_RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Semana 4 - Enunciado 1</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2002.pdf" class="btn enlace-boton" target="_blank">Semana 5 - Enunciado 2</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_AZURE_SQL%20SERVER.pdf" class="btn enlace-boton" target="_blank">Semana 6 - Azure</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_Firebase%20Firestore.pdf" class="btn enlace-boton" target="_blank">Semana 7 - Firebase</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/SEGURIDAD_DATOS_SQL.pdf" class="btn enlace-boton" target="_blank">Semana 8 - Seguridad de Datos_SQL</a></li>
+                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II.github.io/blob/main/PROYECTO_FINAL%20EDWIN%20RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Proyecto Final</a></li>
             </ul>
         </section>
 
         <!-- Ubicación -->
-        <section id="ubicacion" class="container-section">
+        <section id="ubicacion" class="container-section ubicacion">
             <h2>Mi Ubicación</h2>
             <div class="location-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.477290920896!2d-75.29240452317118!3d-12.060297707134586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91070f321559c1c1%3A0xd91c4a75c25f68c9!2sJr.%20Cuzco%20433%20-%20Huancayo%2C%20Per%C3%BA!5e0!3m2!1ses-419!2ses!4v1697651746643!5m2!1ses-419!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=Huancayo,%20Per%C3%BA&output=embed" allowfullscreen="" loading="lazy"></iframe>
             </div>
-        </section>
-
-        <!-- Galería de imágenes -->
-        <section class="img-gallery">
-            <img src="images1.jpg" alt="Imagen 1">
-            <img src="images2.png" alt="Imagen 2">
         </section>
 
     </div>
 
     <!-- Pie de página -->
     <footer class="footer">
-        <p>© 2024 Edwin Ramirez</p>
+        <p>Desarrollado por <b>EDWIN RAMIREZ YARASCA</b></p>
+        <p>¡Sígueme en mis redes sociales!</p>
     </footer>
-
 </body>
 
 </html>
