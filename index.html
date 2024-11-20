@@ -4,267 +4,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mi Perfil Profesional</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" rel="stylesheet">
+    <title>Mi Portafolio Profesional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilos generales */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .header {
-            background-color: #003366;
+        header {
+            background-color: black;
             color: white;
-            padding: 20px 0;
-            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        /* Logo */
+        header .logo {
+            height: 50px;
         }
 
-        .logo-img {
-            width: 150px;
-            height: auto;
-            display: block;
-            margin: 10px auto;
+        /* Barra de navegación */
+        header nav {
+            display: flex;
+            gap: 20px;
         }
 
-        .container {
-            padding: 20px;
-            margin-left: 220px;
-        }
-
-        .container-section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border-radius: 8px;
-            color: white;
-            text-align: center;
-        }
-
-        .sobre-mi {
-            background-color: #005fa3;
-        }
-
-        .proyectos {
-            background-color: #007bff;
-        }
-
-        .ubicacion {
-            background-color: #004080;
-        }
-
-        .container-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .container-section p {
-            font-size: 1.1rem;
-        }
-
-        .footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer-icons {
-            margin-bottom: 10px;
-        }
-
-        .footer-icons a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .footer-icons a:hover {
-            transform: scale(1.2);
-        }
-
-        .location-container {
-            background-color: #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* Google Maps */
-        .location-container iframe {
-            width: 100%;
-            height: 300px;
-            border: 0;
-            border-radius: 8px;
-        }
-
-        .sidebar {
-            width: 200px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #003366;
-            color: white;
-            height: 100%;
-            padding-top: 20px;
-        }
-
-        .sidebar h3 {
-            text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .sidebar ul li a {
+        header nav a {
             color: white;
             text-decoration: none;
             font-size: 1.1rem;
-            transition: background-color 0.3s ease;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
-        .sidebar ul li a:hover {
-            background-color: #007bff;
-            padding: 5px;
+        header nav a:hover {
+            background-color: #555;
+        }
+
+        /* Portada */
+        .portada {
+            position: relative;
+            background-image: url('foto.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            text-align: center;
+            color: white;
+        }
+
+        .portada .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .portada .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .portada .content h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .portada .content .role {
+            font-size: 1.5rem;
+        }
+
+        /* Estilo para Designer y Coder en los extremos */
+        .extremos {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            padding: 0 20px;
+            color: black;
+        }
+
+        .extremos .role {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1.5rem;
+        }
+
+        /* Sección de contenido */
+        .container-section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        /* Estilos de los proyectos */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .project h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
             border-radius: 4px;
         }
 
-        /* Mobile friendly */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .footer-icons a {
-                font-size: 1.3rem;
-            }
-
-            .sidebar {
-                width: 100%;
-                position: relative;
-                height: auto;
-            }
-
-            .sidebar ul li {
-                margin: 10px 0;
-            }
+        .project a:hover {
+            background-color: #555;
         }
 
-        /* Estilos de imágenes */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 20px auto;
-        }
-
-        .img-gallery {
-            display: flex;
-            justify-content: space-around;
+        /* Estilos de contacto y redes */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
             margin-top: 20px;
         }
 
-        .img-gallery img {
-            width: 30%;
-            height: auto;
-            border-radius: 8px;
+        .footer-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 400px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Cabecera -->
-    <header class="header">
-        <img src="logo.png" alt="Logo" class="logo-img">
-        <h1>Mi Perfil Profesional</h1>
+    <!-- Encabezado -->
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </header>
 
-    <!-- Barra lateral (Índice) -->
-    <div class="sidebar">
-        <h3>Índice</h3>
-        <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-        </ul>
+    <!-- Portada -->
+    <div class="portada">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Bienvenido a mi portafolio</h2>
+        </div>
+        <div class="extremos">
+            <div class="role">Designer</div>
+            <div class="role">&lt;Coder&gt;</div>
+        </div>
     </div>
 
-    <!-- Contenido Principal -->
-    <div class="container">
-
-        <!-- Sobre mí -->
-        <section id="sobre-mi" class="container-section sobre-mi">
-            <h2>Sobre mí</h2>
-            <img src="foto.png" alt="Foto Personal" class="profile-img">
-            <p>Soy un profesional apasionado por la tecnología y la innovación. Actualmente trabajo en proyectos que combinan el desarrollo web, bases de datos y la ingeniería de software.</p>
-            <p><b>Redes Sociales:</b></p>
-            <div class="footer-icons">
-                <a href="https://www.facebook.com/edwin.ramyar" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/in/edwin-ram-b756a1339" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/edwyarasca/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@edwyarasca" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </section>
-
-        <!-- Mi perfil profesional (después de sobre mí) -->
-        <section id="perfil-profesional" class="container-section">
-            <h2>Mi Perfil Profesional</h2>
-            <p>A lo largo de mi carrera profesional, he adquirido una amplia experiencia en el desarrollo de soluciones tecnológicas, especialmente en programación, bases de datos y la integración de sistemas.</p>
-        </section>
-
-        <!-- Proyectos -->
-        <section id="proyectos" class="container-section proyectos">
+    <div class="container-section">
+        <!-- Sección de los 8 proyectos -->
+        <section id="proyectos">
             <h2>Mis Proyectos</h2>
-            <p>A continuación, los proyectos realizados en las últimas semanas:</p>
-            <ul>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_1_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 1 - Introducción a Bases de Datos</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA_2_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 2 - Modelo Entidad Relación</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/SEMANA%203_EDWIN%20RAMIREZ%20YARASCA.pdf" class="btn enlace-boton" target="_blank">Semana 3 - SQL Server</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2001_EDWIN_RAMIREZ.pdf" class="btn enlace-boton" target="_blank">Semana 4 - Enunciado 1</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/Enunciado%2002.pdf" class="btn enlace-boton" target="_blank">Semana 5 - Enunciado 2</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_AZURE_SQL%20SERVER.pdf" class="btn enlace-boton" target="_blank">Semana 6 - Azure</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/MANUAL_Firebase%20Firestore.pdf" class="btn enlace-boton" target="_blank">Semana 7 - Firebase</a></li>
-                <li><a href="https://github.com/EDWRAM/BASE_DATOS_II/blob/main/PROTECCION DE DATOS EN EL PERU.pdf" class="btn enlace-boton" target="_blank">Semana 8 - MySQL Workbench</a></li>
-            </ul>
-        </section>
-
-        <!-- Ubicación -->
-        <section id="ubicacion" class="container-section ubicacion">
-            <h2>Ubicación</h2>
-            <div class="location-container">
-                <p>Visítame en:</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.492731081259!2d-72.03301714927688!3d-12.074030045699634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91061f1e7079ef0d%3A0xdf7b1ec8c446ff11!2sAv.%20San%20Carlos%2C%20Huancayo!5e0!3m2!1ses-419!2spe!4v1707447432639!5m2!1ses-419!2spe"
-                    frameborder="0" style="border:0;" allowfullscreen></iframe>
+            <div class="projects">
+                <!-- Proyecto 1 -->
+                <div class="project">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción breve del proyecto 1. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto1.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="project">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción breve del proyecto 2. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto2.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="project">
+                    <h3>Proyecto 3</h3>
+                    <p>Descripción breve del proyecto 3. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto3.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 4 -->
+                <div class="project">
+                    <h3>Proyecto 4</h3>
+                    <p>Descripción breve del proyecto 4. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto4.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 5 -->
+                <div class="project">
+                    <h3>Proyecto 5</h3>
+                    <p>Descripción breve del proyecto 5. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto5.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 6 -->
+                <div class="project">
+                    <h3>Proyecto 6</h3>
+                    <p>Descripción breve del proyecto 6. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto6.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 7 -->
+                <div class="project">
+                    <h3>Proyecto 7</h3>
+                    <p>Descripción breve del proyecto 7. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto7.html">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 8 -->
+                <div class="project">
+                    <h3>Proyecto 8</h3>
+                    <p>Descripción breve del proyecto 8. Un resumen de lo que se hizo en este proyecto.</p>
+                    <a href="proyecto8.html">Ver Proyecto</a>
+                </div>
             </div>
         </section>
 
+        <!-- Contactos -->
+        <section id="contactos">
+            <h2>Contactos</h2>
+            <p>Si deseas contactarme, no dudes en hacerlo a través de los siguientes canales:</p>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <!-- Mapa de Google -->
+            <h3>Ubicación</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.27991200424!2d-74.25909079999999!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNDPCsDUwJzQzLjAiTiA3NMKwMTYnMTYuMCJY9QxLOMNzU&output=embed" allowfullscreen=""></iframe>
+        </section>
     </div>
 
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>© 2024 Mi Perfil Profesional</p>
-    </footer>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+    </div>
 </body>
 
 </html>
+
 
