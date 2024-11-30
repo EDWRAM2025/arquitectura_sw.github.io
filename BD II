@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. [Nombre] - Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Ing. [Nombre]</div>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="socials">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <h1>Transformando ideas en soluciones tecnológicas</h1>
+        <p>Descubre cómo puedo ayudarte a llevar tu proyecto al siguiente nivel.</p>
+        <a href="#contacto" class="btn">Contáctame</a>
+        <a href="#portafolio" class="btn secondary">Ver Portafolio</a>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="about">
+        <h2>Sobre mí</h2>
+        <p>Soy [Nombre], ingeniero de sistemas con experiencia en desarrollo de software, ciberseguridad y gestión de proyectos. Me apasiona crear soluciones que impacten positivamente en los negocios y la vida de las personas.</p>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <h2>Servicios</h2>
+        <div class="service-list">
+            <div class="service">
+                <h3>Desarrollo de Software</h3>
+                <p>Aplicaciones web, móviles y sistemas empresariales.</p>
+            </div>
+            <div class="service">
+                <h3>Consultoría en TI</h3>
+                <p>Transformación digital y optimización tecnológica.</p>
+            </div>
+            <div class="service">
+                <h3>Ciberseguridad</h3>
+                <p>Asegura tus sistemas con auditorías y protocolos robustos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portafolio" class="portfolio">
+        <h2>Portafolio</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <h3>Proyecto 1</h3>
+                <p>Descripción breve del proyecto.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Ing. [Nombre]. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
